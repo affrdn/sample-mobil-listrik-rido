@@ -2,9 +2,9 @@ import { BatteryCharging, Cpu, ShieldCheck } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const tech = [
-  { icon: BatteryCharging, title: "Blade Battery", text: "LFP battery architecture dengan fokus pada stabilitas termal, keamanan, dan durability untuk penggunaan harian." },
-  { icon: Cpu, title: "e-Platform 3.0", text: "Platform EV dedicated untuk efisiensi packaging, kabin lega, charging lebih praktis, dan respons berkendara halus." },
-  { icon: ShieldCheck, title: "DiPilot Safety", text: "Rangkaian bantuan mengemudi seperti adaptive cruise, lane support, blind spot monitoring, dan 360 camera pada banyak varian." }
+  { icon: BatteryCharging, title: "Short Blade Battery", text: "Arsitektur baterai LFP Geely yang berfokus pada keamanan termal, umur pakai panjang, dan efisiensi energi harian." },
+  { icon: Cpu, title: "GEA Architecture", text: "Arsitektur new energy Geely untuk packaging kabin lega, performa responsif, dan efisiensi yang praktis." },
+  { icon: ShieldCheck, title: "Level 2 ADAS", text: "Rangkaian bantuan mengemudi seperti adaptive cruise, lane support, blind spot monitoring, dan 360 camera pada banyak varian." }
 ];
 
 export default function TechnologySection() {
@@ -14,7 +14,7 @@ export default function TechnologySection() {
         <div>
           <p className="eyebrow">Technology</p>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Built around battery intelligence</h2>
-          <p className="mt-5 text-slate-400">Katalog ini menonjolkan teknologi inti BYD: baterai, platform EV, charging, dan sistem keselamatan yang relevan untuk pembeli mobil listrik premium.</p>
+          <p className="mt-5 text-slate-400">Katalog ini menonjolkan teknologi inti Geely Lampung: baterai, GEA architecture, EM-i Super Hybrid, cockpit cerdas, dan sistem keselamatan untuk pembeli kendaraan new energy premium.</p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {tech.map((item) => (

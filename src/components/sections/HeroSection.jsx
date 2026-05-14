@@ -14,12 +14,12 @@ export default function HeroSection({ cars }) {
       <div className="absolute inset-0 bg-radial-cyan" />
       <div className="section-shell relative grid min-h-[calc(100vh-4rem)] items-center gap-10 py-16 lg:grid-cols-[0.9fr_1.1fr]">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="max-w-3xl">
-          <p className="eyebrow">Electric luxury catalog</p>
+          <p className="eyebrow">Official new energy catalog</p>
           <h1 className="mt-5 text-5xl font-semibold leading-[0.95] tracking-normal text-white sm:text-6xl lg:text-7xl">
-            BYD EV Indonesia
+            Geely Lampung
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Jelajahi lini mobil listrik BYD dengan pengalaman katalog premium, pilihan varian interaktif, spesifikasi detail, dan compare UI yang dibuat untuk keputusan lebih percaya diri.
+            Jelajahi produk Geely untuk wilayah Lampung dengan pengalaman katalog premium, pilihan varian interaktif, spesifikasi detail, dan compare UI yang dibuat untuk keputusan lebih percaya diri.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="#models" className="premium-button">
@@ -30,9 +30,9 @@ export default function HeroSection({ cars }) {
             </Link>
           </div>
           <div className="mt-10 grid max-w-2xl grid-cols-3 gap-3">
-            <HeroStat icon={<Zap size={18} />} label="Blade Battery" value="Safety-first" />
+            <HeroStat icon={<Zap size={18} />} label="Short Blade" value="Safety-first" />
             <HeroStat icon={<Gauge size={18} />} label="0-100 km/h" value="from 3.8s" />
-            <HeroStat icon={<ShieldCheck size={18} />} label="ADAS" value="DiPilot" />
+            <HeroStat icon={<ShieldCheck size={18} />} label="ADAS" value="Level 2 Safety" />
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.1 }} className="glass-panel rounded-[2rem]">

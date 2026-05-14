@@ -21,7 +21,7 @@ export default function Navbar() {
           <span className="grid h-9 w-9 place-items-center rounded-full border border-cyan-300/40 bg-cyan-300/10 text-cyan-200">
             <Zap size={18} />
           </span>
-          <span className="text-lg tracking-wide">BYD EV</span>
+          <span className="text-lg tracking-wide">Geely Lampung</span>
         </Link>
         <div className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (

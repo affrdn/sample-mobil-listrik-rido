@@ -13,7 +13,7 @@ export default function CompareSection({ cars }) {
       <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="eyebrow">Compare UI</p>
-          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Bandingkan model BYD</h2>
+          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">Bandingkan model Geely</h2>
         </div>
         <div className="flex items-center gap-2 text-sm text-slate-400">
           <GitCompareArrows size={18} className="text-cyan-200" />

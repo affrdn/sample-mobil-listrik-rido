@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
     title: `${car.name} ${car.category}`,
     description: `${car.description} Lihat harga, varian, baterai, range, charging, safety, dan interior ${car.name}.`,
     openGraph: {
-      title: `${car.name} | BYD EV Indonesia`,
+      title: `${car.name} | Geely Lampung`,
       description: car.description
     }
   };
