@@ -3,7 +3,7 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const phoneNumber = "6281234567890";
+const phoneNumber = "6289648077525";
 const message = encodeURIComponent(
   "Halo Geely Lampung, saya ingin bertanya atau memesan produk Geely. Mohon dibantu informasinya."
 );
