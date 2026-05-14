@@ -6,11 +6,12 @@ import { useState } from "react";
 import CarVisual from "@/components/ui/CarVisual";
 import VariantSelector from "@/components/detail/VariantSelector";
 import SpecificationGrid from "@/components/detail/SpecificationGrid";
+import VariantComparison from "@/components/detail/VariantComparison";
 import { useCarStore } from "@/store/useCarStore";
 
 export default function DetailClient({ car }) {
   const [variant, setVariant] = useState(car.variants[0]);
-  const { toggleCompare } = useCarStore();
+  const { toggleCompareVariant } = useCarStore();
 
   return (
     <main>
@@ -48,6 +49,34 @@ export default function DetailClient({ car }) {
         </div>
       </section>
 
+      <section className="section-shell py-10">
+        <div className="mb-6">
+          <p className="eyebrow">Pro vs Max</p>
+          <h2 className="mt-3 text-3xl font-semibold">Bandingkan varian dengan mudah</h2>
+          <p className="mt-3 max-w-3xl text-slate-400">
+            Lihat ringkasan fitur, harga, performa, dan pembeda utama setiap varian. Pilih kartu varian untuk memperbarui visual, harga, dan detail spesifikasi di halaman ini.
+          </p>
+        </div>
+        <VariantComparison car={car} selectedVariant={variant} onSelect={setVariant} />
+      </section>
+
+      <section className="section-shell py-10">
+        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="eyebrow">Variant details</p>
+            <h2 className="mt-3 text-3xl font-semibold">Detail {car.name} {variant.name}</h2>
+          </div>
+          <button onClick={() => toggleCompareVariant(car, variant)} className="premium-button">
+            Compare varian ini <GitCompareArrows size={17} />
+          </button>
+        </div>
+        <div className="grid gap-5 lg:grid-cols-3">
+          <InfoPanel icon={<BatteryCharging />} title="Highlight utama" items={variant.highlights || []} />
+          <InfoPanel icon={<ShieldCheck />} title="Fitur varian" items={variant.exclusiveFeatures || []} />
+          <InfoPanel icon={<GitCompareArrows />} title="Pembeda penting" items={variant.notableDifferences || []} />
+        </div>
+      </section>
+
       <section className="section-shell py-12">
         <div className="mb-6">
           <p className="eyebrow">Specifications</p>
@@ -68,7 +97,7 @@ export default function DetailClient({ car }) {
             <p className="eyebrow">Gallery</p>
             <h2 className="mt-3 text-3xl font-semibold">Design details</h2>
           </div>
-          <button onClick={() => toggleCompare(car)} className="premium-button">
+          <button onClick={() => toggleCompareVariant(car, variant)} className="premium-button">
             Add to compare <GitCompareArrows size={17} />
           </button>
         </div>

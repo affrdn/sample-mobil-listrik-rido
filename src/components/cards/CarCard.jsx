@@ -1,16 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Heart, Plus } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import CarVisual from "@/components/ui/CarVisual";
-import { useCarStore } from "@/store/useCarStore";
 
 export default function CarCard({ car }) {
-  const variant = car.variants[0];
-  const { compareCars, wishlist, toggleCompare, toggleWishlist } = useCarStore();
-  const compared = compareCars.some((item) => item.id === car.id);
-  const wished = wishlist.some((item) => item.id === car.id);
+  const [variant, setVariant] = useState(car.variants[0]);
 
   return (
     <motion.article
@@ -25,30 +22,41 @@ export default function CarCard({ car }) {
             <p className="text-sm text-cyan-200">{car.category}</p>
             <h3 className="mt-1 text-2xl font-semibold">{car.name}</h3>
           </div>
-          <div className="flex gap-2">
-            <button
-              onClick={() => toggleWishlist(car)}
-              className={`grid h-10 w-10 place-items-center rounded-full border transition ${wished ? "border-cyan-200 bg-cyan-300 text-slate-950" : "border-white/10 bg-white/5 text-white hover:border-cyan-200"}`}
-              aria-label="Wishlist"
-            >
-              <Heart size={17} />
-            </button>
-            <button
-              onClick={() => toggleCompare(car)}
-              className={`grid h-10 w-10 place-items-center rounded-full border transition ${compared ? "border-cyan-200 bg-cyan-300 text-slate-950" : "border-white/10 bg-white/5 text-white hover:border-cyan-200"}`}
-              aria-label="Add to compare"
-            >
-              <Plus size={17} />
-            </button>
-          </div>
+          <p className="rounded-full border border-cyan-200/30 bg-cyan-300/10 px-3 py-1 text-xs font-semibold text-cyan-100">
+            {variant.name}
+          </p>
         </div>
+
+        <div className="flex flex-wrap gap-2">
+          {car.variants.map((item) => {
+            const active = variant.name === item.name;
+
+            return (
+              <button
+                key={item.name}
+                type="button"
+                onClick={() => setVariant(item)}
+                className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${active ? "border-cyan-200 bg-cyan-300 text-slate-950" : "border-white/10 bg-white/5 text-slate-300 hover:border-cyan-200/60 hover:text-white"}`}
+              >
+                {item.name}
+              </button>
+            );
+          })}
+        </div>
+
         <div className="grid grid-cols-3 gap-3 text-sm">
-          <Metric label="From" value={variant.price} />
+          <Metric label="Price" value={variant.price} />
           <Metric label="Range" value={variant.range} />
           <Metric label="Battery" value={variant.battery} />
         </div>
+
+        <div className="grid grid-cols-2 gap-3 text-sm">
+          <Metric label="Power" value={variant.power} />
+          <Metric label="Charging" value={variant.chargingSpeed} />
+        </div>
+
         <Link href={`/cars/${car.slug}`} className="ghost-button w-full justify-between">
-          View details <ArrowUpRight size={17} />
+          Lihat detail {variant.name} <ArrowUpRight size={17} />
         </Link>
       </div>
     </motion.article>

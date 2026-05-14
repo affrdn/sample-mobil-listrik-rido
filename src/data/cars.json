@@ -39,8 +39,40 @@
       "Infotainment": "15.4 inch HD touchscreen, 10.2 inch cluster, Flyme Auto"
     },
     "variants": [
-      { "name": "Pro", "price": "Rp 465.000.000", "range": "495 km", "battery": "60.22 kWh", "power": "160 kW", "torque": "320 Nm", "drivetrain": "FWD", "acceleration": "6.9 s", "topSpeed": "175 km/h", "chargingSpeed": "20 min DC", "image": "ex5-pro", "accent": "#22d3ee" },
-      { "name": "Max", "price": "Rp 505.000.000", "range": "490 km", "battery": "60.22 kWh", "power": "160 kW", "torque": "320 Nm", "drivetrain": "FWD", "acceleration": "7.1 s", "topSpeed": "175 km/h", "chargingSpeed": "20 min DC", "image": "ex5-max", "accent": "#67e8f9" }
+      {
+        "name": "Pro",
+        "price": "Rp 465.000.000",
+        "range": "495 km",
+        "battery": "60.22 kWh",
+        "power": "160 kW",
+        "torque": "320 Nm",
+        "drivetrain": "FWD",
+        "acceleration": "6.9 s",
+        "topSpeed": "175 km/h",
+        "chargingSpeed": "20 min DC",
+        "image": "ex5-pro",
+        "accent": "#22d3ee",
+        "highlights": ["495 km NEDC range", "11-in-1 electric drive", "Flyme Auto infotainment", "Front seat ventilation", "V2L and V2V power supply"],
+        "exclusiveFeatures": ["Cruise Control System (CCS)", "6-speaker audio system", "Completely flat back driver seat", "18 inch alloy wheels", "Snow White and two-tone exterior colors"],
+        "notableDifferences": ["Panoramic power sunroof not included", "No W-HUD", "No 16-speaker Flyme Sound", "No front seat memory", "No front seat massage"]
+      },
+      {
+        "name": "Max",
+        "price": "Rp 505.000.000",
+        "range": "490 km",
+        "battery": "60.22 kWh",
+        "power": "160 kW",
+        "torque": "320 Nm",
+        "drivetrain": "FWD",
+        "acceleration": "7.1 s",
+        "topSpeed": "175 km/h",
+        "chargingSpeed": "20 min DC",
+        "image": "ex5-max",
+        "accent": "#67e8f9",
+        "highlights": ["490 km NEDC range", "13 Level 2 ADAS functions", "W-HUD", "16-speaker Flyme Sound", "Panoramic power sunroof"],
+        "exclusiveFeatures": ["AEB, ACC, ICC, LKA, BSD, ELKA", "Front seat memory", "Front seat massage function", "256-color ambient lighting", "Power tailgate and panoramic sunroof"],
+        "notableDifferences": ["More complete ADAS package than Pro", "Premium audio replaces 6-speaker setup", "Comfort and convenience package is richer", "Official price IDR 515.000.000, special price IDR 505.000.000"]
+      }
     ]
   },
   {
@@ -83,8 +115,40 @@
       "Infotainment": "14.6 inch HD central display and 8.8 inch LCD instrument cluster"
     },
     "variants": [
-      { "name": "Pro", "price": "Rp 239.900.000", "range": "395 km", "battery": "40.8 kWh", "power": "85 kW", "torque": "150 Nm", "drivetrain": "RWD", "acceleration": "11.5 s", "topSpeed": "130 km/h", "chargingSpeed": "25 min DC", "image": "ex2-pro", "accent": "#bae6fd" },
-      { "name": "Max", "price": "Rp 269.900.000", "range": "395 km", "battery": "40.8 kWh", "power": "85 kW", "torque": "150 Nm", "drivetrain": "RWD", "acceleration": "11.5 s", "topSpeed": "130 km/h", "chargingSpeed": "25 min DC", "image": "ex2-max", "accent": "#38bdf8" }
+      {
+        "name": "Pro",
+        "price": "Rp 239.900.000",
+        "range": "395 km",
+        "battery": "40.8 kWh",
+        "power": "85 kW",
+        "torque": "150 Nm",
+        "drivetrain": "RWD",
+        "acceleration": "11.5 s",
+        "topSpeed": "130 km/h",
+        "chargingSpeed": "25 min DC",
+        "image": "ex2-pro",
+        "accent": "#bae6fd",
+        "highlights": ["395 km NEDC range", "Rear-wheel drive", "70L front trunk", "375/1320L trunk capacity", "V2L power supply"],
+        "exclusiveFeatures": ["Eco/Comfort/Sport drive modes", "14.6 inch HD central display", "8.8 inch LCD instrument cluster", "Semi-concealed exterior door handles", "Core smart safety package"],
+        "notableDifferences": ["No metal side skirts", "Remote scheduled charging not included", "More value-focused trim", "Updated OTR Jakarta price per 1 March 2026"]
+      },
+      {
+        "name": "Max",
+        "price": "Rp 269.900.000",
+        "range": "395 km",
+        "battery": "40.8 kWh",
+        "power": "85 kW",
+        "torque": "150 Nm",
+        "drivetrain": "RWD",
+        "acceleration": "11.5 s",
+        "topSpeed": "130 km/h",
+        "chargingSpeed": "25 min DC",
+        "image": "ex2-max",
+        "accent": "#38bdf8",
+        "highlights": ["395 km NEDC range", "70 kW max DC charging", "Remote scheduled charging", "Metal side skirts", "Enhanced smart features"],
+        "exclusiveFeatures": ["Remote scheduled charging", "Metal side skirts", "Full Pro equipment", "More complete exterior styling", "V2L power supply"],
+        "notableDifferences": ["Same battery and motor as Pro", "Adds selected styling and convenience features", "Higher trim price IDR 269.900.000", "Best fit for users wanting complete EX2 equipment"]
+      }
     ]
   },
   {
@@ -127,7 +191,23 @@
       "Infotainment": "Premium audio with connected smart cabin"
     },
     "variants": [
-      { "name": "EM-i", "price": "Rp 499.000.000", "range": "1000+ km", "battery": "18.4 kWh", "power": "160 kW", "torque": "265 Nm", "drivetrain": "FWD", "acceleration": "8.0 s", "topSpeed": "170 km/h", "chargingSpeed": "<20 min DC", "image": "starray-em-i", "accent": "#2dd4bf" }
+      {
+        "name": "EM-i",
+        "price": "Rp 499.000.000",
+        "range": "1000+ km",
+        "battery": "18.4 kWh",
+        "power": "160 kW",
+        "torque": "265 Nm",
+        "drivetrain": "FWD",
+        "acceleration": "8.0 s",
+        "topSpeed": "170 km/h",
+        "chargingSpeed": "<20 min DC",
+        "image": "starray-em-i",
+        "accent": "#2dd4bf",
+        "highlights": ["1000+ km NEDC combined range", "105 km NEDC electric range", "EM-i Super Hybrid", "14 Level 2 ADAS functions", "16-speaker premium audio"],
+        "exclusiveFeatures": ["1.5L 4-cylinder hybrid engine", "18.4 kWh LFP battery", "DC fast charging under 20 minutes", "Ventilated front seats", "540 panoramic view"],
+        "notableDifferences": ["Plug-in hybrid, not pure EV", "51L fuel tank", "Pure/Hybrid/Power drive modes", "Combined fuel and electric long-distance capability"]
+      }
     ]
   }
 ]
